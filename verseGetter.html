@@ -1,0 +1,30 @@
+<head>
+<script type="text/javascript" src="https://www.biblia.info.pl/api/displayVerse.js"></script>
+<script>
+                var listBrand =['LEXUS','AUDI','MAYBACK','FERRARI','TOYOTA'];   
+                //the array
+                function printBtn() {
+                    for (var i = 0; i < 300; i++) {
+                       var btn = document.createElement("button");
+					   btn.style.marginLeft = "0px";
+					   btn.style.marginRight = "0px";
+                       var t = document.createTextNode(i);
+                       btn.appendChild(t);
+					   if (i%2 ==0) {
+							btn.style.background='#DC143C';
+					   }
+					   else {
+					   btn.style.background='#7FFF00';
+					   }
+                       document.body.appendChild(btn);
+                    }
+                }
+           </script>  
+</head>
+<body onload="printBtn();">
+<div id="werset_nr1"></div>
+<script>
+    displayVerse('werset_nr1', 'bt', 'gen', '12', '1-4', true);
+</script>
+
+</body>
